@@ -1,5 +1,7 @@
 # -*- coding: UTF-8 -*-
 import numpy as np
+######  第四章           Numpy学习
+#######
 ##当high为默认值时，low为最大值
 data = np.random.randint(7,high=19,size = (3,4),dtype=np.uint8)
 print(data)
