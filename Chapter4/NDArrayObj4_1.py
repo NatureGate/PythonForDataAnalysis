@@ -84,12 +84,66 @@ print(arr3d[0,0:,:3])
 
 
 #######################神奇索引
+#######################神奇索引与切片不同，它总是将数据复制到一个新的数组中
 arr = np.empty((8,4))
 for i in range(8):
     arr[i] = i
 print(arr)
 arry1 = arr[[4,3,0,6]]
 print(arry1)
+##使用负的索引，从尾部选择
+arry2 = arr[[-1,-3,-5]]
+print(arry2)
+##选择(1,0),(5,3),(7,1),(2,2)
+arr = np.arange(32).reshape((8,4))
+arry3 = arr[[1,5,7,2],[0,3,1,2]]
+print(arry3)
+
+####数组的转置和换轴
+####转置是一种特殊的数组重组形式，可以返回底层数据的视图而不需要复制任何内容。数组拥有transpose
+####方法，也有特殊的T属性(就是矩阵的转置)
+arr = np.arange(15).reshape((3,5))
+print(arr)
+print(arr.T)
+#######计算数组的内积,randn表示随机正态分布
+arr = np.random.randn(3,6)
+arrd = np.dot(arr,arr.T)
+print(arrd)
+
+####更高维度的数组transpose方法接收包含轴编号的元祖,用于置换轴
+###transpose() @param:shape()参数的索引
+###三维数组就是(0,1,2),transpose(0,1,2)就是没有做任何改变
+###swapaxes()方法将两个维度进行转置
+arr = np.arange(16).reshape((2,2,4))
+arr_t = arr.transpose((1,0,2))
+print(arr_t)
+print(arr)
+print(arr.swapaxes(1,2))
+
+
+#######通用函数ufunc,逐元素替换函数
+#一元函数
+##    函数名
+##    abs fbs
+#    sqrt
+#    square
+#    exp
+##    log/log10/log2/log1p
+##    sign
+##    ceil
+##    floor
+##    rint
+##    modf
+##    isnan
+##    isfinite/isinf
+##    cos/cosh/sin
+##    sinh/tan/tanh
+##   arccos/arccosh/arcsin
+##    arcsinh/arctan/arctanh
+##    logical_not
+
+####################################################################################
+
 
 
 
