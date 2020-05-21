@@ -3,7 +3,7 @@ import  pandas as pd
 import  numpy as np
 from pandas import  Series,DataFrame
 ###  Series是一个既包含数组,也包含dict的结构
-##   既可以随机访问,也可以通过hash访问
+##   既可以随机访问,也可以通过hash访问 ..
 obj = pd.Series([2,4,6,1,-3])
 print(obj)
 print(obj.values)
