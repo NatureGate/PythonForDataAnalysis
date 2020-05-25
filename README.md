@@ -10,7 +10,6 @@ PythonForDataAnalysis
 
 
 
-wx：sxar1990
 
 2020年5月20日
 
