@@ -171,7 +171,7 @@ print(frame.apply(f2))
 format = lambda x: '%.2f' % x
 print(frame.applymap(format))
 
-### 排序和排名
+### 排序和排名  sort_index 按index本身排序  sort_values按索引的值排序
 obj = pd.Series(range(4), index=['d', 'a', 'b', 'c'])
 printSeries(obj)
 obj.sort_index()
@@ -179,3 +179,9 @@ obj.sort_index()
 frame = createNomalDataFrame()
 print(frame.sort_index())
 printDataFrame(frame.sort_index(axis=1))
+
+###按某一列,一行排序,可选参数by
+frame = pd.DataFrame({'b':[4,7,-3,2],'a':[0,1,0,1]})
+printDataFrame(frame)
+
+###rank排名
